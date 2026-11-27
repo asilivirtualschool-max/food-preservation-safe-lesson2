@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Food Preservation Lab · Lesson 2</title>
+<!-- PWA: makes the lab installable to a phone/desktop home screen -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#222F62">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Food Lab 2">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <style>
 /* ===========================================================================
    Compare Characters Lab — GEMS "Learn Like a GEM" house style
@@ -418,5 +428,15 @@ table.vtr th{background:var(--teal)}
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
 <script src="app.js"></script>
+<script>
+/* Register the service worker so the lab can be installed and opened offline. */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function (e) {
+      console.warn('SW registration failed (the app still works):', e);
+    });
+  });
+}
+</script>
 </body>
 </html>

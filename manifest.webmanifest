@@ -1,0 +1,20 @@
+{
+  "name": "Food Preservation Lab — Lesson 2",
+  "short_name": "Food Lab 2",
+  "description": "PYP 5 Science — the principles behind food preservation. Students join with an anonymous code.",
+  "id": "/food-preservation-safe-lesson2/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#222F62",
+  "theme_color": "#222F62",
+  "lang": "en",
+  "categories": ["education"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
